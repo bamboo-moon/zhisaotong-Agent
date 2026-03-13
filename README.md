@@ -148,11 +148,6 @@ pip install streamlit langchain langchain-core langchain-community langgraph \
             langchain-chroma chromadb dashscope pypdf pyyaml
 ```
 
-或者，若项目提供了 `requirements.txt`：
-
-```bash
-pip install -r requirements.txt
-```
 
 ---
 
@@ -160,13 +155,13 @@ pip install -r requirements.txt
 
 ### 1. 阿里云 API Key
 
-本项目使用阿里云通义千问大模型和 DashScope Embedding，需要配置环境变量：
+本项目使用阿里云通义千问大模型和 DashScope Embedding，需要配置系统环境变量：
 
 ```bash
-export DASHSCOPE_API_KEY="your_dashscope_api_key"
+OPENAI_API_KEY="your_open_api_key"
 ```
 
-> 可在 [阿里云 DashScope 控制台](https://dashscope.console.aliyun.com/) 获取 API Key。
+> 可在 [阿里云百炼平台](https://bailian.console.aliyun.com/) 获取 API Key。
 
 ### 2. 高德地图 API Key
 
