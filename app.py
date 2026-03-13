@@ -41,8 +41,3 @@ if prompt:
         st.rerun()
 
 
-"""
-可以这样子改进：
-chroma改为redis
-地点、天气等改为调用高德的MCP？
-"""
