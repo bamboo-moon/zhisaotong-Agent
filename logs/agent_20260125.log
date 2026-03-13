@@ -1,0 +1,154 @@
+2026-01-25 15:40:48,540 - agent - INFO - logger_handler.py:56 - 信息日志
+2026-01-25 15:40:48,540 - agent - ERROR - logger_handler.py:57 - 错误日志
+2026-01-25 15:40:48,540 - agent - WARNING - logger_handler.py:58 - 警告日志
+2026-01-25 15:40:48,540 - agent - DEBUG - logger_handler.py:59 - 调试日志
+2026-01-25 18:46:40,060 - agent - ERROR - file_handler.py:44 - [listdir_with_allowed_type]data不是文件夹
+2026-01-25 18:46:40,060 - agent - ERROR - file_handler.py:11 - [md5计算]文件txt不存在
+2026-01-25 18:46:40,061 - agent - ERROR - vector_store.py:99 - [加载知识库]txt加载失败：Error loading txt
+Traceback (most recent call last):
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\rag\vector_store.py", line 57, in get_file_documents
+    return txt_loader(read_path)
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\utils\file_handler.py", line 59, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading txt
+2026-01-25 18:46:40,063 - agent - ERROR - file_handler.py:11 - [md5计算]文件pdf不存在
+2026-01-25 18:46:40,064 - agent - ERROR - vector_store.py:99 - [加载知识库]pdf加载失败：File path pdf is not a valid file or url
+Traceback (most recent call last):
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\rag\vector_store.py", line 60, in get_file_documents
+    return pdf_loader(read_path)
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\utils\file_handler.py", line 55, in pdf_loader
+    return PyPDFLoader(filepath, passwd).load()
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_community\document_loaders\pdf.py", line 281, in __init__
+    super().__init__(file_path, headers=headers)
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_community\document_loaders\pdf.py", line 140, in __init__
+    raise ValueError("File path %s is not a valid file or url" % self.file_path)
+ValueError: File path pdf is not a valid file or url
+2026-01-25 18:49:25,161 - agent - INFO - vector_store.py:96 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\扫地机器人100问.pdf 内容加载成功
+2026-01-25 18:49:25,162 - agent - ERROR - vector_store.py:99 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\扫地机器人100问2.txt加载失败：Error loading D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\扫地机器人100问2.txt
+Traceback (most recent call last):
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\rag\vector_store.py", line 57, in get_file_documents
+    return txt_loader(read_path)
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\utils\file_handler.py", line 59, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\扫地机器人100问2.txt
+2026-01-25 18:49:25,165 - agent - ERROR - vector_store.py:99 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\扫拖一体机器人100问.txt加载失败：Error loading D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\扫拖一体机器人100问.txt
+Traceback (most recent call last):
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\rag\vector_store.py", line 57, in get_file_documents
+    return txt_loader(read_path)
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\utils\file_handler.py", line 59, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\扫拖一体机器人100问.txt
+2026-01-25 18:49:25,166 - agent - ERROR - vector_store.py:99 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\故障排除.txt加载失败：Error loading D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\故障排除.txt
+Traceback (most recent call last):
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\rag\vector_store.py", line 57, in get_file_documents
+    return txt_loader(read_path)
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\utils\file_handler.py", line 59, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\故障排除.txt
+2026-01-25 18:49:25,169 - agent - ERROR - vector_store.py:99 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\维护保养.txt加载失败：Error loading D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\维护保养.txt
+Traceback (most recent call last):
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\rag\vector_store.py", line 57, in get_file_documents
+    return txt_loader(read_path)
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\utils\file_handler.py", line 59, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\维护保养.txt
+2026-01-25 18:49:25,171 - agent - ERROR - vector_store.py:99 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\选购指南.txt加载失败：Error loading D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\选购指南.txt
+Traceback (most recent call last):
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\rag\vector_store.py", line 57, in get_file_documents
+    return txt_loader(read_path)
+  File "D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\utils\file_handler.py", line 59, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\dev\sdk\Python\Python310\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\选购指南.txt
+2026-01-25 18:51:24,165 - agent - INFO - vector_store.py:74 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-01-25 18:51:40,429 - agent - INFO - vector_store.py:96 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\扫地机器人100问2.txt 内容加载成功
+2026-01-25 18:51:58,014 - agent - INFO - vector_store.py:96 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\扫拖一体机器人100问.txt 内容加载成功
+2026-01-25 18:52:16,754 - agent - INFO - vector_store.py:96 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\故障排除.txt 内容加载成功
+2026-01-25 18:52:25,037 - agent - INFO - vector_store.py:96 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\维护保养.txt 内容加载成功
+2026-01-25 18:52:33,179 - agent - INFO - vector_store.py:96 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\选购指南.txt 内容加载成功
+2026-01-25 18:53:06,339 - agent - INFO - vector_store.py:74 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-01-25 18:53:06,339 - agent - INFO - vector_store.py:74 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-01-25 18:53:06,340 - agent - INFO - vector_store.py:74 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-01-25 18:53:06,341 - agent - INFO - vector_store.py:74 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\故障排除.txt内容已经存在知识库内，跳过
+2026-01-25 18:53:06,341 - agent - INFO - vector_store.py:74 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\维护保养.txt内容已经存在知识库内，跳过
+2026-01-25 18:53:06,342 - agent - INFO - vector_store.py:74 - [加载知识库]D:\dev\code\python\AI大模型RAG与智能体开发_Agent项目\data\选购指南.txt内容已经存在知识库内，跳过
+2026-01-25 20:01:34,631 - agent - WARNING - agent_tools.py:103 - [fetch_external_data]未能检索到用户：1021在2025-01的使用记录数据

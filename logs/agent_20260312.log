@@ -1,0 +1,58 @@
+2026-03-12 21:55:12,081 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-12 21:55:12,081 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 你好呀
+2026-03-12 21:55:42,032 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-12 21:55:42,032 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 我想要知道我现在该怎么保养机器人
+2026-03-12 21:55:45,081 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-03-12 21:55:45,081 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '扫地机器人日常保养维护指南'}
+2026-03-12 21:55:49,305 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-03-12 21:55:50,429 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-12 21:55:50,430 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 扫地机器人日常保养维护包括：定期清理尘盒和滤网，避免灰尘堆积影响吸力；检查并清理滚刷和边刷，防止毛发缠绕；擦拭传感器和充电触点，确保正常工作；定期检查轮子是否被异物卡住；保持充电座周围清洁，确保顺利回充。
+2026-03-12 21:58:19,379 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-12 21:58:19,379 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 帮我生成我的报告
+2026-03-12 21:58:26,225 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_user_id
+2026-03-12 21:58:26,226 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-03-12 21:58:26,226 - agent - INFO - middleware.py:24 - [tool monitor]工具get_user_id调用成功
+2026-03-12 21:58:26,282 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-12 21:58:26,282 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 1008
+2026-03-12 21:58:30,666 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_current_month
+2026-03-12 21:58:30,666 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-03-12 21:58:30,667 - agent - INFO - middleware.py:24 - [tool monitor]工具get_current_month调用成功
+2026-03-12 21:58:30,755 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-12 21:58:30,756 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 2025-10
+2026-03-12 21:58:33,570 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：fill_context_for_report
+2026-03-12 21:58:33,571 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-03-12 21:58:33,571 - agent - INFO - middleware.py:24 - [tool monitor]工具fill_context_for_report调用成功
+2026-03-12 21:58:33,868 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-12 21:58:33,868 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-03-12 21:58:37,384 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：fetch_external_data
+2026-03-12 21:58:37,384 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'user_id': '1008', 'month': '2025-10'}
+2026-03-12 21:58:37,395 - agent - INFO - middleware.py:24 - [tool monitor]工具fetch_external_data调用成功
+2026-03-12 21:58:38,668 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有9条消息。
+2026-03-12 21:58:38,668 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | {"特征": "100㎡三居 | 三口之家 | 大理石", "效率": "覆盖率:88%\\n避障成功率:93%", "耗材": "主刷寿命:剩余65天\\n水箱加水:每日1次", "对比": "大理石地面清洁效果低于同类10%"}
+2026-03-12 21:58:46,288 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-03-12 21:58:46,289 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '大理石地面扫地机器人清洁建议'}
+2026-03-12 21:58:51,902 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-03-12 21:58:53,222 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有11条消息。
+2026-03-12 21:58:53,223 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 使用扫地机器人清洁大理石地面时，应选择软毛刷或橡胶滚刷，避免使用硬质刷毛以防刮伤表面；建议开启湿拖功能时使用专用清洁液并控制水量，防止水渍残留；定期清理机器人滚刷和边刷，避免砂砾磨损地面；确保大理石已做防滑或密封处理，以增强耐污性和抗渗性。
+2026-03-12 21:58:56,648 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-03-12 21:58:56,648 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '提高扫地机器人覆盖率和避障成功率的方法'}
+2026-03-12 21:59:00,314 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-03-12 21:59:01,819 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有13条消息。
+2026-03-12 21:59:01,819 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 提高扫地机器人覆盖率和避障成功率的方法包括：优化SLAM算法以提升建图精度和路径规划效率；采用多传感器融合技术（如激光雷达、视觉传感器、红外和超声波）增强环境感知能力；改进机械结构设计以减少死角；通过AI算法识别并避开常见障碍物；以及利用历史清扫数据进行智能学习与路径优化。
+2026-03-12 21:59:04,259 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-03-12 21:59:04,259 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '扫地机器人主刷和水箱维护保养建议'}
+2026-03-12 21:59:08,243 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-03-12 21:59:09,340 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有15条消息。
+2026-03-12 21:59:09,340 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 主刷维护建议：定期清理缠绕在主刷上的毛发和杂物，检查主刷是否磨损或损坏，必要时更换。水箱维护建议：使用后清空剩余水，定期清洗水箱内部防止污垢和霉菌滋生，避免使用腐蚀性清洁剂，确保水箱密封圈完好无损。
+2026-03-12 23:46:00,093 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-12 23:46:00,094 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 我所在城市的天气该如何保养机器人？
+2026-03-12 23:46:04,636 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_user_location
+2026-03-12 23:46:04,636 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-03-12 23:46:05,743 - agent - INFO - middleware.py:24 - [tool monitor]工具get_user_location调用成功
+2026-03-12 23:46:05,788 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-12 23:46:05,788 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 青岛市
+2026-03-12 23:46:09,039 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_weather
+2026-03-12 23:46:09,039 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'city': '青岛市'}
+2026-03-12 23:46:09,338 - agent - INFO - middleware.py:24 - [tool monitor]工具get_weather调用成功
+2026-03-12 23:46:09,979 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-12 23:46:09,979 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 城市青岛市天气为多云，气温5摄氏度，空气湿度61%，西风≤3级，数据发布时间2026-03-12 23:33:15。
